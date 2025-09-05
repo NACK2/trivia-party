@@ -19,4 +19,6 @@ public class PlayerService {
     public void addPlayer(Player player) {
         playerRepository.save(player);
     }
+
+    public void removePlayer(String string) { playerRepository.deleteById(string); }
 }
