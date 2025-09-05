@@ -1,5 +1,7 @@
 package com.nack2.trivia_party_server.player;
 
+import com.nack2.trivia_party_server.Common.Response;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,12 +17,17 @@ public class PlayerController {
     }
 
     @GetMapping
-    public List<Player> getPlayers() {
+    public ResponseEntity<Response<List<Player>>> getPlayers() {
         return playerService.getAllPlayers();
     }
 
     @PostMapping
-    public void addPlayer(@RequestBody Player player) {
-        playerService.addPlayer(player);
+    public ResponseEntity<Response<Void>> addPlayer(@RequestBody Player player) {
+        return playerService.addPlayer(player);
+    }
+
+    @DeleteMapping("/{playerId}")
+    public ResponseEntity<Response<Void>> removePlayer(@PathVariable String playerId) {
+        return playerService.removePlayer(playerId);
     }
 }

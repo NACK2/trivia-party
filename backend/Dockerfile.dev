@@ -1,6 +1,6 @@
 FROM eclipse-temurin:21
 
-WORKDIR /app/server
+WORKDIR /app/backend
 
 COPY .mvn/ .mvn
 

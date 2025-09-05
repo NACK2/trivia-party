@@ -46,7 +46,7 @@ docker compose up db -d
 There are 3 ways to access the Postgres DB: Through pgAdmin4 (provides GUI), the terminal, or Docker Desktop
 - pgAdmin4:
   - Register a new server connection
-  - Fill in the credentials (hostname: `localhost`, port: `5433`, username: `postgress`, password: `password`) and connect
+  - Fill in the credentials (hostname: `localhost`, port: `5433`, database name: `trivia_party`, username: `postgres`, password: `password`) and connect
 - Terminal:
   - Within the terminal, type in the command `docker exec -it postgres-db bash` to enter the bash shell of the postgres container
   - Type `psql -U postgres` to connect using the `postgres` user role
