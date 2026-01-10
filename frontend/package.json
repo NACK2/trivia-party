@@ -13,11 +13,12 @@
   "dependencies": {
     "@mantine/core": "^8.2.2",
     "@mantine/hooks": "^8.2.2",
+    "@supabase/supabase-js": "^2.89.0",
     "@tabler/icons-react": "^3.34.1",
     "clsx": "^2.1.1",
-    "react-router-dom": "^7.5.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.5.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
